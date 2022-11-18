@@ -5,6 +5,7 @@ const Game = () => {
 
 // useEffect to first load deck
 // then every time Start New Game is clicked, reset deck via dependency array
+//Create new component to handle state change
 
 const value = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A",]
 const suit = ["♠️", "♥️", "♣️", "♦️"]
@@ -83,6 +84,7 @@ const initializeDeal = () => {
 
 function getCard(state) {
     // consider playDeck.pop() for O(1) time vs playDeck.shift() which is O(n) time
+    // 
     const card = playDeck.pop()
     // const card = playDeck.shift()
     state(card)
